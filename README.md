@@ -5,7 +5,7 @@
 
 ## Workshop 4Geeks Academy
 
-<img src="screen.png" width="500" />
+<img src="screen.png" />
 
 
 ## Ejercicio

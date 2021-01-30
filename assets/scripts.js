@@ -34,11 +34,29 @@ const add = (event) =>{
 	nameForm.focus();
 }
 
+
+const deleteMascota = (e, index) =>{
+	
+		e.preventDefault();
+		const updatedList = [
+			...mascotasArray.slice(0, index),
+			...mascotasArray.slice(index + 1),
+		];
+
+		mascotasArray = [...updatedList];
+		
+
+		listMascotas();
+		reset();
+		nameForm.focus();
+
+};
+
 // FUNCION QUE VUELVE A CREAR EL <ul></ul> 
 const toJoin = (mascota, i) =>{
   const list = document.getElementById("list");
   const item = document.createElement("li");
-  item.innerHTML = `<a href="#" onclick="deleteUser(event,${i})" >
+  item.innerHTML = `<a href="#" onclick="deleteMascota(event,${i})" >
 		<ion-icon name="trash-outline"></ion-icon>
 		<span class="ml-4" >${mascota.name}</span>
 		<span class="ml-4 badge badge-secondary" >${mascota.tipo}</span>

@@ -15,13 +15,21 @@
 				<div class="card shadow">
 					<div class="card-body">
 						<h3 class="">Creación de Mascotas</h3>
-						<form>
+						
+						<form id="idForm" method="POST" action="#">
+						
 							<div class="form-group">
-								<label for="exampleInputEmail1">Nombre</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-								<small id="emailHelp" class="form-text text-muted">Crea un nombre original a tu mascota.</small>
+								<label for="idName">Nombre</label>
+								<input type="text" class="form-control" id="idName">
+								<small class="form-text text-muted">Crea un nombre original a tu mascota.</small>
 							</div>
-							<button type="submit" class="btn btn-primary">Crear</button>
+							<div class="form-group">
+								<label for="idTipo">Tipo</label>
+								<input type="text" class="form-control" id="idTipo">
+								<small class="form-text text-muted">Los tipos pueden ser perro, gato, pájaro.</small>
+							</div>
+							<button onclick="add(event)" type="submit" class="btn btn-primary">Crear</button>
+						
 						</form>
 					</div>
 				</div>
@@ -31,6 +39,9 @@
 			<div class="card shadow h-100">
 				<div class="card-body">
 					<h3 class="">Mascotas vigentes</h3>
+
+					<div id="notification"></div>
+
 					<ul id="list">
 						<li>
 							<a href="">
